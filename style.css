@@ -1,0 +1,309 @@
+/* Importação de fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Open+Sans:wght@400&display=swap');
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F8F8F8; /* Cor de fundo suave */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: #8BC34A; /* Verde grama */
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se quebrem em telas menores */
+}
+
+header h1 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Espaço abaixo do título em telas menores */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens do menu se quebrem */
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #FFEB3B; /* Amarelo ensolarado */
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: linear-gradient(to right, #A8E6CF, #DCEDC8); /* Gradiente suave */
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+#hero h2 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: #4CAF50; /* Verde mais escuro */
+}
+
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #FFC107; /* Laranja divertido */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FF9800; /* Laranja mais escuro */
+    transform: scale(1.05);
+}
+
+/* --- Seções Gerais --- */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-family: 'Comic Neue', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 40px;
+    color: #4CAF50;
+    border-bottom: 3px solid #8BC34A;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* --- Sobre Nós --- */
+#sobre {
+    background-color: #FFFFFF;
+}
+
+#sobre .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Espaço entre a imagem e o texto */
+    flex-wrap: wrap; /* Permite que os itens se quebrem em telas menores */
+    text-align: left; /* Alinha o texto à esquerda dentro do wrapper */
+}
+
+.about-image {
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#sobre p {
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+/* --- Atividades --- */
+#atividades {
+    background-color: #E8F5E9; /* Verde claro */
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.activity-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+}
+
+.activity-card h3 {
+    font-family: 'Comic Neue', cursive;
+    color: #FFC107;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.activity-card p {
+    color: #555;
+}
+
+/* --- Galeria --- */
+#galeria {
+    background-color: #FFFFFF;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 150px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* --- Contato --- */
+#contato {
+    background-color: #F0F4C3; /* Amarelo esverdeado suave */
+}
+
+#contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+#contato form input[type="text"],
+#contato form input[type="email"],
+#contato form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+#contato form textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+#contato form .button {
+    align-self: flex-start; /* Alinha o botão à esquerda dentro do formulário */
+    background-color: #4CAF50;
+}
+
+#contato form .button:hover {
+    background-color: #388E3C;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade (Media Queries) --- */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 15px;
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    #hero h2 {
+        font-size: 2.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    #sobre .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image {
+        max-width: 100%; /* Ajusta a imagem para caber em telas menores */
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas menores */
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .button {
+        padding: 12px 25px;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
